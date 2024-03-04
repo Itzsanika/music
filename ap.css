@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    position: absolute;
+    width: 100%;
+    
+ }
+  h1{
+    color: #fff;
+
+  }
+  nav a{
+    margin-left: 5rem;
+    font-size: large;
+    color: #fff
+ }
+  section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+    background: #170e0e;
+  }
