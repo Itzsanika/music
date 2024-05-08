@@ -32,21 +32,21 @@
         <section id="home">
             <div class="container">
                 <img src="C:/Users/sandh/Downloads/png-transparent-vinyl-platinum-disk-music-dj-drive-former-concert-red-black-thumbnail.png" id="img" alt="">
-                <h3>DECEMBER 2023</h3>
+                
 
-                <h1 class="H1"> EPISODE #08 - OUR VACATION</h1>
+                <h1 class="H1">TO BE PLAY</h1>
                 <div class="content">
-                    <h3>LIFESTYLE //</h3>
-                    <h3> 45 MIN //</h3>
-                    <i class='bx bxs-download'></i>
-                    <h3>DOWNLOAD</h3>
+                    
+                    <h3 id="full_time">00:00</h3>
+                
+                    
                 </div>
             </div>
-            <h3>LIFESTYLE //</h3>
-            <h3> 45 MIN //</h3>
+            
+            
             <div class="player">
 
-                <label for="">00:00</label>
+                <label for="" id="timeline_duration">00:00</label>
                 <div class="play">
                     <button class="pb"><i class='bx bx-play-circle' id="player_btn"></i></button>
                     <input type="range" name="" id="play" min="0" max="100" value="0">
@@ -83,7 +83,7 @@
                     <img src="uplode/<?php echo $r["Image_filename"]?>" alt="">
                     <div class="card_content">
 
-                        <h3>DECEMBER 21, 2015</h3>
+                    
                         <h1>
                             <?php echo $r['Music_name'];?>
                         </h1>
@@ -94,7 +94,7 @@
                             <h3>
                                 <?php echo $r['Singer_name'];?> //
                             </h3>
-                            <h3> 45 MIN //</h3>
+                            
                             <!-- <i class='bx bx-play-circle'></i> -->
                             <h3>PLAY</h3>
                             <button class="pb1" value="<?php echo $exe[" Music_name"]?>">
@@ -224,12 +224,16 @@
 
     </footer>
     <button id="music_player">Music</button>
-    <div id="mini_player">
-        <input type="range">
+    <div class="mini_player">
+        
+        <input type="range" name="" id="music" min="0" max="100" value="0">
         <div class="control">
             <i class='bx bx-skip-previous'></i>
-            <i class='bx bx-play-circle'></i>
-            <i class='bx bx-skip-next'></i>
+            <!-- <i class='bx bx-play-circle' ></i> -->
+            <button class="mb"><i class='bx bx-play-circle' id="music_btn"></i></button>
+            
+            
+            <button class="mb2"><i class='bx bx-skip-next' id = "nxt"></i></button>
         </div>
     </div>
     <script src="main.js"></script>
