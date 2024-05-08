@@ -16,7 +16,7 @@
     <a href="page.php">Home</a>
     <a href="">Podcast</a>
     <a href="">Pages</a>
-    <a href="about.php">About</a>
+    <a href="#" class="hm">About</a>
     <a href="cont.php">Contact</a>
     <a href="login.php">log out</a>
 

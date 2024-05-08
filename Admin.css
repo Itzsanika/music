@@ -9,10 +9,12 @@
 }
 h1{
     display: flex;
-    color: #0de96c;
+    color: #03264f;
 }
 nav{
+    height: 3rem;
     display: flex;
+    background: rgb(46, 50, 48);
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -20,7 +22,7 @@ nav{
     
 }
 nav a{
-    color: #2de0b9;
+    color: #e3760a;
     font-family: serif;
     font-size: large;
 }

@@ -9,14 +9,14 @@
 <body>
 
   <header>
+    <h1>ADMIN</h1>
     <nav>
       <a href="admin.php">home</a>
       <a href="user.php">user data</a>
-      <a href="">music data</a>
+      <a href="muz.php">music data</a>
       <a href="">log out</a>
     </nav>
   </header>
-  <h1>ADMIN</h1>
   
   
 </body>

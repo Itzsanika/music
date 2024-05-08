@@ -33,6 +33,14 @@ nav a{
     font-family: serif;
     font-size: large;
 }
+nav > a:hover{
+  border-bottom:3px solid coral;
+}
+.hm{
+  color: coral;
+  border-bottom:3px solid coral;
+
+}
   section{
     min-height: 100vh;
     padding: 10rem 9% 10rem;
@@ -43,6 +51,15 @@ nav a{
     box-shadow: 0 0 100px black inset;
 
   }
+  .pb{
+    background: transparent;
+    border: none;
+  }
+  .pb1{
+    background: transparent;
+    border: none;
+    color: greenyellow;
+  }
    
   .container{
     display: flex;
@@ -50,6 +67,8 @@ nav a{
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
+    width: 50rem;
+    
   }
   .form_container{
     display: flex;
@@ -98,6 +117,7 @@ nav a{
     transform: translateY(-10rem);
     display: flex;
     align-items: center;
+    align-content: center;
     color: #fff;
   }
 
@@ -243,7 +263,7 @@ color: #fff;
 
 .mini_player{
   position: fixed;
-  background: #ff0101;
+  background: #e50606;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,10 +317,16 @@ color: #fff;
   color: #fff;
   /* margin-top: 7rem; */
   font-family:sans-serif;
-  border:solid #980000 ;
+  border:solid #66e3fa ;
   border-radius: 50%;
   padding: 2rem;
   line-height: 3rem;
  }
+ .play{
+  display: flex;
+  align-items: center;
+  
+ }
+ 
 
   

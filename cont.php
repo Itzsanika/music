@@ -36,7 +36,7 @@ if(isset($_POST['sub'])){
             <a href="">Podcast</a>
             <a href="">Pages</a>
             <a href="about.php">About</a>
-            <a href="">Contact</a>
+            <a href="#" class="hm">Contact</a>
             <a href="login.php">log out</a>
     
         </nav>

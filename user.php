@@ -21,11 +21,13 @@ if(isset($_POST['del'])){
 <header>
     <nav>
       <a href="admin.php">home</a>
-      <a href="page.php">user data</a>
-      <a href="">music data</a>
+      <a href="usre.php">user data</a>
+      <a href="muz.php">music data</a>
       <a href="">log out</a>
     </nav>
   </header>
+
+  </form>
   <table  width="100%" border="1">
     <tr>
       <th>ID</th>
