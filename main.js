@@ -4,6 +4,7 @@ let active =document.getElementById('active');
  mini_player_btn.onclick = () => {
     mini_player.classList.toggle('active');
 }
+let main = 0;
 let player_btn = document.getElementById("player_btn");
 let audio= new Audio();
 let card_btn = Array.from(document.querySelectorAll('.card_content button'));
@@ -18,7 +19,9 @@ let timeline_duration = document.getElementById('timeline_duration');
 let ful_time = document.querySelector('#ful_time');
 let music_btn = document.getElementById("music_btn");
 let mini_player_bg = document.querySelector('.mini_player'); 
-let next_btn =  document.getElementById('nxt')
+let next_btn =  document.getElementById('nxt');
+let prev_btn = document.getElementById('prev');
+
 
 player_btn.addEventListener('click',() => {   
     if(audio.paused){
@@ -55,12 +58,10 @@ async function fetxh(){
         elem.addEventListener('click',(ab)=>{
             
             abc = parseInt(ab.target.id)
-            console.log(abc)
             sname = ab.target = data[idx].Music_name;
             singername = ab.target = data[idx].Singer_name;
             imagefile = ab.target = data[idx].Image_filename;
             audiofile = ab.target = data[idx].Audio_filename;
-            console.log(audiofile)
             audio.src = `uplode/${audiofile}`;
             audio.play();
             audio.addEventListener('loadedmetadata',()=>{
@@ -68,7 +69,6 @@ async function fetxh(){
                 let min = "0" + Math.floor(duration/60);
                 let sec = "0"+ Math.floor(duration - min * 60);
                 let calc = min.substr(-2)+ ":" + sec.substr(-2);
-                console.log(calc);
                 main_duration.innerHTML=calc;
                 full_time.innerHTML=`//${calc}//`;
                 audio.addEventListener("timeupdate",()=>{
@@ -93,7 +93,6 @@ async function fetxh(){
                     
                 }
                 }
-                ful_time.forEach((elem,idx))
 
 
 
@@ -101,26 +100,6 @@ async function fetxh(){
                 player_duration.addEventListener("input",()=>{
                     audio.currentTime = (player_duration.value *audio.duration)/100
                 })
-                next_btn.onclick = () => {
-                    audio++;
-                    if (audio >= data.length){
-                        audio = 0;
-                    }
-                    nxt = data[audio].Music_name;
-                    nxt_file = data[audio].Image_filename;
-                    nxt_audio = data[audio].Audio_filename;
-                
-                    player_btn.innerText = nxt;
-                    player.src = `Uplode/img/${nxt_file}`;
-                    audio.src = `uplode/song/${nxt_audio}`;
-                    mini_player_bg.innerText = nxt;
-                    player.src = `Uplode/img/${nxt_file}`;
-                    audio.src = `uplode/song/${nxt_audio}`;
-                    audio
-                    
-                    
-
-                }
                 
                 
                 
@@ -131,12 +110,47 @@ async function fetxh(){
             img_container.style.backgroundSize = "cover";
             mini_player_bg.style.background = `radial-gradient(blue, rgba(0,0,0,0.2)),url('uplode/${imagefile}')`;
             mini_player_bg.style.backgroundSize = "cover";
-           audio.play();
-           player_btn.classList.remove("bx-play-circle");
-           player_btn.classList.add("bx-pause-circle");
-           music_btn.classList.remove("bx-play-circle");
-           music_btn.classList.add("bx-pause-circle");
+            audio.play();
+            player_btn.classList.remove("bx-play-circle");
+            player_btn.classList.add("bx-pause-circle");
+            music_btn.classList.remove("bx-play-circle");
+            music_btn.classList.add("bx-pause-circle");
         })
+        next_btn.onclick = () => {
+            main++;
+            if (main >= data.length){
+                main = 0;
+            }
+            nxt = data[main].Music_name;
+            nxt_file = data[main].Image_filename;
+            nxt_audio = data[main].Audio_filename;
+            audio.src = `uplode/${nxt_audio}`;
+            mini_player_bg.style.background = `radial-gradient(blue, rgba(0,0,0,0.2)),url('uplode/${nxt_file}')`;
+            mini_player_bg.style.backgroundSize = "cover";
+            
+            // console.log(nxt,nxt_file,nx)
+
+            
+            
+
+        }
+        prev_btn.onclick = () => {
+            main--;
+            prev = data[main].Music_name;
+            prev_file = data[main].Image_filename;
+            prev_audio = data[main].Audio_filename;
+            audio.src = `uplode/${prev_audio}`;
+            mini_player_bg.style.background = `radial-gradient(blue, rgba(0,0,0,0.2)),url('uplode/${prev_file}')`;
+            mini_player_bg.style.backgroundSize = "cover";
+            
+            console.log(prev,prev_file,prev_audio)
+            
+        
+
+            
+            
+
+        }
         
     })
 }
