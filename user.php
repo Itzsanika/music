@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","mydb");
+$con = mysqli_connect('sql312.infinityfree.com','if0_36552763','PJJMxBUIJsa','if0_36552763_mydb');
 if(isset($_POST['del'])){
   $dele = $_POST['del'];
   $del_que = mysqli_query($con,"delete from users where id='$dele'");
